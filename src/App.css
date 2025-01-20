@@ -1,0 +1,35 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#tileGame + #newGame {
+  margin-top: 2em;
+}
+
+#tileGame {
+  width: 300px;
+  height: 300px;
+}
+
+#tileGame button {
+  width: 100px;
+  height: 100px;
+  background-image: url(toucan.jpg);
+  background-size: 300px 300px;
+  border-radius: 0;
+}
+
+#tileGame button#tile-1 { background-position: 0000px 0000px; }
+#tileGame button#tile-2 { background-position: -100px 0000px; }
+#tileGame button#tile-3 { background-position: -200px 0000px; }
+#tileGame button#tile-4 { background-position: 0000px -100px; }
+#tileGame button#tile-5 { background-position: -100px -100px; }
+#tileGame button#tile-6 { background-position: -200px -100px; }
+#tileGame button#tile-7 { background-position: 0000px -200px; }
+#tileGame button#tile-8 { background-position: -100px -200px; }
+#tileGame button#tile-9 {
+  background: gray;
+}

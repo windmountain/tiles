@@ -1,6 +1,6 @@
 # Tile Game
 
-![Screenshot of a 3x3 tile sliding game with a Toucan](/public/toucan.jpg).
+![Screenshot of a 3x3 tile sliding game with a Toucan](/public/screenshot.png).
 
 Tile sliding game backed by [Fireproof](https://use-fireproof.com).
 

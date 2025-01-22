@@ -1,5 +1,5 @@
 import { useDocument, useLiveQuery } from 'use-fireproof'
-import { newGame, move } from './core'
+import { newGame, move, isAdjacentTo8, isSolved } from './core'
 import './App.css'
 
 
@@ -23,17 +23,20 @@ function App() {
   return (
     <>
       {games.map((game) => (
+        <>
+        { isSolved(game.tiles) && <h1>Solved!</h1> }
         <div key={game._id} id="tileGame">
           {game.tiles.map((n) =>
             <button
               key={n+1}
               id={`tile-${n+1}`}
-              disabled={n == 8}
+              disabled={n == 8 || !isAdjacentTo8(n, game.tiles) || isSolved(game.tiles)}
               onClick={(e) => makeMove(n, game)}
               >
             </button>
           )}
         </div>
+        </>
       ))}
       <button id="newGame" onClick={async () => { await saveGame() }}>
         New Game
